@@ -1,1 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
+body{
+  background-color: #A9A9A9;
+}
+
+main {
+  #content{
+    section{
+      border: 1px solid black;
+      margin-bottom: 1px;
+    }
+  }
+}

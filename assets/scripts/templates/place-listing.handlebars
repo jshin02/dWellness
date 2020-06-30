@@ -1,0 +1,18 @@
+{{#each places as |place|}}
+  {{log place}}
+  <section data-id="{{place._id}}">
+    <h6>Title:</h6>
+    <h4>{{limit place.title 20}}</h4>
+    <h6>Address:</h6>
+    <h4>{{limit place.address 30}}</h4>
+    <h6>City:</h6>
+    <h4>{{limit place.city 15}}</h4>
+      {{#if place.country}}
+        <h6>Country:</h6>
+        <h4>{{limit place.country 15}}</h4>
+      {{else}}
+      {{/if}}
+      <!-- {{> partial book=book}} -->
+  </section>
+
+{{/each}}

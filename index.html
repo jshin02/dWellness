@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>dWellness</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,69 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+        <h1>Welcome to dWellness</h1>
+        <section id="signup" class="registration">
+          <h3>Create A New Account</h3>
+          <form id="signup-form">
+            <input type="text" name="credentials[email]" placeholder="E-mail" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+        </section>
+        <section id="signin" class="registration">
+          <h3>Sign In</h3>
+          <form id="signin-form">
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <button type="submit">Sign In</button>
+          </form>
+        </section>
+        <section id="signedIn">
+          <h3>Change Password</h3>
+          <form id="pwChange-form">
+            <input type="text" name="passwords[old]" placeholder="Old Password">
+            <input type="text" name="passwords[new]" placeholder="New Password">
+            <button type="submit">Change</button> <button id="signout-button" type='submit'>Sign Out</button>
+          </form>
+        </section>
+        <span id="registration-result"></span>
+      </header>
+
+      <main>
+        <h3>Add Places</h3>
+        <section id="addPlace" class="place">
+          <form id="addPlace-form">
+            <input type="text" name="place[title]" placeholder="Title">
+            <input type="text" name="place[address]" placeholder="Address">
+            <input type="text" name="place[city]" placeholder="City">
+            <input type="text" name="place[country]" placeholder="Country">
+            <button type="submit">Add Place!</button>
+          </form>
+        </section>
+        <section id="updatePlace" class="place">
+          <h3>Update Place</h3>
+          <form id="updatePlace-form">
+            <input type="text" name="place[title]" placeholder="Title">
+            <input type="text" name="place[address]" placeholder="Address">
+            <input type="text" name="place[city]" placeholder="City">
+            <input type="text" name="place[country]" placeholder="Country">
+            <input type="text" name="place[place_id]" placeholder="place_id">
+            <button type="submit">Update Place</button>
+          </form>
+        </section>
+        <section id="deletePlace" class="place">
+          <h3>Delete Place</h3>
+          <form id="deletePlace-form">
+            <input type="text" name="place[id]" placeholder="place_id">
+            <button type="submit">Delete Place</button>
+          </form>
+        </section>
+        <section id="places-index">
+          <button type="submit">Get Places</button>
+        </section>
+        <div id="content" class="content"></div>
+      </main>
     </body>
 </html>
