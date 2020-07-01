@@ -8,6 +8,8 @@
 const authEvents = require('./authentication/events.js')
 const placeEvents = require('./place/events.js')
 const notesEvents = require('./notes/events.js')
+const userX = require('./userX/events.js')
+
 $(() => {
   //authentication events
   $('#signup-form').on('submit', authEvents.onSignUp)
@@ -25,4 +27,7 @@ $(() => {
   $('#addnote-form').on('submit', notesEvents.onAddNote)
   $('#updateNote-form').on('submit', notesEvents.onUpdateNote)
   $('#deleteNote-form').on('submit', notesEvents.onDeleteNote)
+
+  //Ui/Ux
+  userX.addHandlers()
 })

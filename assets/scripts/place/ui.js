@@ -34,7 +34,10 @@ const deletePlaceFailure = () => {
 const getPlacesSuccess = ajaxData => {
   console.log(ajaxData)
   const showPlacesHtml = showPlacesTemplate({ places: ajaxData.places})
-  $('.content').append(showPlacesHtml)
+  console.log(showPlacesHtml)
+  $('.onePlace').remove().hide()
+  $('.content').append(showPlacesHtml).fadeIn()
+
   console.log('getPlacesSuccess');
 }
 
