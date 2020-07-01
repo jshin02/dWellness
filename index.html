@@ -72,7 +72,42 @@
           </form>
         </section>
         <section id="places-index">
-          <button type="submit">Get Places</button>
+          <button type="submit">See all Places</button>
+        </section>
+        <section id="addNote">
+          <h3>Add note</h3>
+          <form id="addnote-form">
+            <input type="text" name="note[title]" placeholder="Title">
+            <input type="text" name="note[body]" placeholder="Content">
+            <input type="number" name="note[health]" placeholder="Health Rating">
+            <input type="number" name="note[work]" placeholder="Work Rating">
+            <input type="number" name="note[play]" placeholder="Play Rating">
+            <input type="number" name="note[love]" placeholder="Love Rating">
+            <input type="text" name="note[place_id]" placeholder="Place ID">
+            <button type="submit">Add Note</button>
+          </form>
+        </section>
+        <section id="updateNote">
+          <h3>Edit note</h3>
+          <form id="updateNote-form">
+            <input type="text" name="note[title]" placeholder="Title">
+            <input type="text" name="note[body]" placeholder="Content">
+            <input type="number" name="note[health]" placeholder="Health Rating">
+            <input type="number" name="note[work]" placeholder="Work Rating">
+            <input type="number" name="note[play]" placeholder="Play Rating">
+            <input type="number" name="note[love]" placeholder="Love Rating">
+            <input type="text" name="note[place_id]" placeholder="Place ID">
+            <input type="text" name="note[note_id]" placeholder="Note ID">
+            <button type="submit">Edit Note</button>
+          </form>
+        </section>
+        <section id="deleteNote">
+          <h3>Delete Note</h3>
+          <form id="deleteNote-form">
+            <input type="text" name="note[place_id]" placeholder="Place ID">
+            <input type="text" name="note[note_id]" placeholder="Note ID">
+            <button type="submit">Delete Note</button>
+          </form>
         </section>
         <div id="content" class="content"></div>
       </main>

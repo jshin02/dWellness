@@ -7,6 +7,7 @@
 // require('./example')
 const authEvents = require('./authentication/events.js')
 const placeEvents = require('./place/events.js')
+const notesEvents = require('./notes/events.js')
 $(() => {
   //authentication events
   $('#signup-form').on('submit', authEvents.onSignUp)
@@ -19,4 +20,9 @@ $(() => {
   $('#updatePlace-form').on('submit', placeEvents.onUpdatePlace)
   $('#deletePlace-form').on('submit', placeEvents.onDeletePlace)
   $('#places-index').on('click', placeEvents.onGetPlaces)
+
+  //note CRUD
+  $('#addnote-form').on('submit', notesEvents.onAddNote)
+  $('#updateNote-form').on('submit', notesEvents.onUpdateNote)
+  $('#deleteNote-form').on('submit', notesEvents.onDeleteNote)
 })
