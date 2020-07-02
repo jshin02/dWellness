@@ -2,7 +2,8 @@ const store = require('../store.js')
 const showPlacesTemplate = require('../templates/place-listing.handlebars')
 
 const onAddNoteSuccess = data => {
-  console.log(data)
+  store.note_id=data.notes[data.notes.length-1]._id
+  console.log(store.noteId)
   console.log('Added note successfully')
   $('#addnote-form').trigger('reset')
 }

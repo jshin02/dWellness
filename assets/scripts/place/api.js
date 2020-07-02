@@ -7,6 +7,15 @@ const getPlaces = () => {
   })
 }
 
+const showPlace = id => {
+  return $.ajax({
+    url: config.apiUrl+'/places/'+id,
+    headers: {
+      Authorization: "Bearer "+store.user.token
+    }
+  })
+}
+
 const addPlace = formData => {
   return $.ajax({
     method: 'POST',
@@ -58,6 +67,7 @@ const deletePlace = formData => {
 
 module.exports = {
   getPlaces,
+  showPlace,
   addPlace,
   updatePlace,
   deletePlace

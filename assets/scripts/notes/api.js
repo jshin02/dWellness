@@ -13,7 +13,7 @@ const addNote = data => {
         work: data.note.work,
         play: data.note.play,
         love: data.note.love,
-        place_id: data.note.place_id
+        place_id: store.place_id
       }
     }
   })
@@ -21,7 +21,7 @@ const addNote = data => {
 
 const updateNote = data => {
   return $.ajax({
-    url: config.apiUrl+'/places/'+data.note.place_id+'/notes/'+data.note.note_id,
+    url: config.apiUrl+'/places/'+store.place_id+'/notes/'+store.note_id,
     method: 'PATCH',
     data:{
       note:{
