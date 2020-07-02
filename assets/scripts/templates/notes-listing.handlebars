@@ -11,6 +11,17 @@
   </form>
 </section>
 
+<section id="note">
 {{#each notes as |note|}}
   {{log note}}
+  <h3>Title</h3>
+  <p>{{note.title}}</p>
+  <h3>dWellnote</h3>
+  <p>{{note.body}}</p>
+  <h4>Health: {{note.health}}</h4>
+  <h4>Work: {{note.work}}</h4>
+  <h4>Play: {{note.play}}</h4>
+  <h4>love: {{note.love}}</h4>
+  <button id="deleteNoteButton" data-id="{{note._id}}">Delete!</button>
 {{/each}}
+</section>

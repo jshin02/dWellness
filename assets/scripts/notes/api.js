@@ -36,9 +36,10 @@ const updateNote = data => {
   })
 }
 
-const deleteNote = data => {
+const deleteNote = () => {
+  console.log(store.place_id, store.note_id)
   return $.ajax({
-    url: config.apiUrl+'/places/'+data.note.place_id+'/notes/'+data.note.note_id,
+    url: config.apiUrl+'/places/'+store.place_id+'/notes/'+store.note_id,
     method: 'DELETE'
   })
 }

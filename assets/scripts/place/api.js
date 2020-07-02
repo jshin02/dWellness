@@ -7,9 +7,9 @@ const getPlaces = () => {
   })
 }
 
-const showPlace = id => {
+const showPlace = () => {
   return $.ajax({
-    url: config.apiUrl+'/places/'+id,
+    url: config.apiUrl+'/places/'+store.place_id,
     headers: {
       Authorization: "Bearer "+store.user.token
     }

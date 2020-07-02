@@ -3,6 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const store = require('../store')
 const api = require('./api.js')
+const placeApi = require('../place/api.js')
 const ui = require('./ui.js')
 
 const onAddNote = event => {
@@ -25,9 +26,12 @@ const onUpdateNote = event => {
 
 const onDeleteNote = event => {
   event.preventDefault()
-  let data = getFormFields(event.target)
+  console.log(event)
+  store.note_id = event.target.dataset.id
+  $('.showPlace').empty()
 
-  api.deleteNote(data)
+  api.deleteNote()
+    .then(placeApi.showPlace)
     .then(ui.onDeleteNoteSuccess)
     .catch(ui.onDeleteNoteFailure)
 }
