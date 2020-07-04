@@ -5,6 +5,7 @@ const placeApi = require('../place/api.js')
 
 const addHandlers = event => {
   $('.content').on('click', '#showPlaceButton', showPlace)
+  $('#signup').on('click', registrationNeeded)
 }
 
 const showPlace = event => {
@@ -21,6 +22,12 @@ const showPlace = event => {
   placeApi.showPlace()
     .then(ui.showPlaceContent)
     .catch()
+}
+
+const registrationNeeded = event => {
+  $('#signup-form').css('opacity','0').fadeIn().show()
+  $('#signin-form').hide()
+
 }
 
 module.exports = {

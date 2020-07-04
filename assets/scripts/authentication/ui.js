@@ -17,6 +17,8 @@ const signInSuccess = data => {
   console.log('Sign in Success')
   console.log(store)
   $('#signin-form').trigger('reset')
+  $('header').hide().fadeOut()
+  $('main').show().fadeIn()
 }
 
 const signInFailure = () => {

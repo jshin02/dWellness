@@ -24,4 +24,7 @@ $(() => {
 
   //Ui/Ux
   userX.addHandlers()
+  $('main').hide()
+  $('#signup-form').hide()
+  // $('#signInMessage').hide()
 })

@@ -13,36 +13,53 @@
     </head>
     <body>
       <header>
-        <h1>Welcome to dWellness</h1>
-        <section id="signup" class="registration">
-          <h3>Create A New Account</h3>
-          <form id="signup-form">
-            <input type="text" name="credentials[email]" placeholder="E-mail" required>
-            <input type="password" name="credentials[password]" placeholder="Password" required>
-            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
-            <button type="submit">Sign Up</button>
-          </form>
-        </section>
-        <section id="signin" class="registration">
-          <h3>Sign In</h3>
-          <form id="signin-form">
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <button type="submit">Sign In</button>
-          </form>
-        </section>
-        <section id="signedIn">
+        <h1>Welcome to <span id="dwell">dWell</span>ness</h1>
+        <div class="form-row">
+          <section id="signup" class="col-6 registration">
+            <form id="signup-form">
+              <h3>Create Account</h3>
+              <input type="text" class="form-control" name="credentials[email]" placeholder="E-mail" required>
+              <input type="password" class="form-control sm" name="credentials[password]" placeholder="Password" required>
+              <input type="password" class="form-control sm" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+              <button type="submit">Sign Up</button>
+            </form>
+          </section>
+          <section id="signin" class="col-6 registration">
+            <form id="signin-form">
+              <h3>Sign In</h3>
+              <input type="text" class="form-control sm" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control sm" name="credentials[password]" placeholder="Password">
+              <button type="submit">Sign In</button>
+            </form>
+          </section>
+          <section id="authMessages" class="col authMessages">
+            <section id="signUpMessage" class="col-6">
+              <h3>Hello, Friend!</h3>
+              <h5>Sign up to start recording all of the places you go and how they impact your wellness.</h5>
+              <form id='test'>
+                <button type="submit" class="ghost" id="signup">Sign Up</button>
+              </form>
+            </section>
+            <section id="signInMessage" class="col-6">
+              <h3>Welcome Back!</h3>
+              <button class="ghost" id="signin">Sign In</button>
+            </section>
+          </section>
+        </div>
+        <blockquote id="seuss">You're on your own. And you know what you know. And you are the one who'll decide where to go. <span id=author>-Oh, The Places You Will Go!</span></blockquote>
+        <span id="registration-result"></span>
+      </header>
+      <main>
+        <!-- User Preferences -->
+        <section id="signedIn" class="preferences">
           <h3>Change Password</h3>
           <form id="pwChange-form">
-            <input type="text" name="passwords[old]" placeholder="Old Password">
-            <input type="text" name="passwords[new]" placeholder="New Password">
+            <input type="text" class="form-control" name="passwords[old]" placeholder="Old Password">
+            <input type="text" class="form-control" name="passwords[new]" placeholder="New Password">
             <button type="submit">Change</button> <button id="signout-button" type='submit'>Sign Out</button>
           </form>
         </section>
-        <span id="registration-result"></span>
-      </header>
 
-      <main>
         <h3>Add Places</h3>
         <section id="addPlace" class="place">
           <form id="addPlace-form">
@@ -74,24 +91,7 @@
         <section id="places-index">
           <button type="submit">See all Places</button>
         </section>
-
-        <!-- <section id="updateNote">
-          <h3>Edit note</h3>
-          <form id="updateNote-form">
-            <input type="text" name="note[title]" placeholder="Title">
-            <input type="text" name="note[body]" placeholder="Content">
-            <input type="number" name="note[health]" placeholder="Health Rating">
-            <input type="number" name="note[work]" placeholder="Work Rating">
-            <input type="number" name="note[play]" placeholder="Play Rating">
-            <input type="number" name="note[love]" placeholder="Love Rating">
-            <input type="text" name="note[place_id]" placeholder="Place ID">
-            <input type="text" name="note[note_id]" placeholder="Note ID">
-            <button type="submit">Edit Note</button>
-          </form>
-        </section> -->
-
         <div id="content" class="content"></div>
-
         <div class="place-container">
           <div class="showPlace"></div>
         </div>

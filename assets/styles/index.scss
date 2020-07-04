@@ -1,23 +1,113 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+// **** Global Stylesheet ****
 body{
-  background-color: #A9A9A9;
+  background-color: #F6F5F7;
+  font-family: 'Montserrat', sans-serif;
+}
+span{
+  font-family:'Dancing Script', cursive;
 }
 
+//**** Authentication Stylesheet ****
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+    h1{
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #3a52a3;
+    }
+    h3{
+      font-weight: bold;
+      color: #fff;
+    }
+    h5{
+      padding: 15px;
+      color: #fff;
+    }
+    blockquote{
+      margin-top: 20px;
+    }
+    input{
+      background: #eee;
+      border: none;
+      padding: 12px;
+      margin: 8px 0;
+      width: 100%;
+      border-radius: 10px;
+    }
+    button{
+      margin: 0;
+      border-radius: 20px;
+      color: #fff;
+      border: 1px solid #fff;
+      background-color: transparent;
+      font-weight: bold;
+      padding: 8px 30px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      font-size: 12px;
+    }
+    button:active{
+      transform: scale(.95);
+    }
+    button:focus{
+      outline: none;
+    }
+}
+.form-row{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  min-height: 400px;
+  position: relative;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+.registration{
+  z-index: 2;
+}
+.authMessages{
+  background-color: #3a52a3;
+  background: linear-gradient(to right, #3a52a3, #ff4b2b);
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 5px solid green;
+}
+
+
+// Main functionality St
 main {
+  .place-container{
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
   #content{
     section{
       border: 1px solid black;
       margin-bottom: 1px;
     }
-  }
-}
-
-
-main{
-  .place-container{
-    // .item{
-      border: 1px solid black;
-      margin-bottom: 20px;
-    // }
   }
 }
