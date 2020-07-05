@@ -11,7 +11,7 @@ const addHandlers = event => {
 
 const showPlace = event => {
   //grab the element that user clicks on and add styling class
-  $('.content').empty().fadeOut()
+  $('.showPlace').empty().fadeOut()
   event.preventDefault()
   console.log(event)
   $(event.target.firstElementChild).addClass('item')
@@ -20,7 +20,7 @@ const showPlace = event => {
   //store id for notes CRUD actions
   store.place_id=place.dataset.id
   console.log(place)
-  $('.showPlace').append($(place)).fadeIn()
+  $('.content').append($(place)).fadeIn()
   //Show notes in place
   placeApi.showPlace()
     .then(ui.showPlaceContent)
