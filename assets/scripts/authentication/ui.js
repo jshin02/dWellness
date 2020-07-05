@@ -17,8 +17,9 @@ const signInSuccess = data => {
   console.log('Sign in Success')
   console.log(store)
   $('#signin-form').trigger('reset')
-  $('header').hide().fadeOut()
-  $('main').show().fadeIn()
+  $('header').fadeOut()
+  $('.form-row').toggleClass('form-complete')
+  $('main').delay(350).fadeIn()
 }
 
 const signInFailure = () => {
@@ -42,6 +43,7 @@ const signOutSuccess = data => {
   console.log('Signed Out')
   store.user = null
   console.log(store)
+  // $('header').show().fadeIn().toggleClass('.form-complete')
 }
 
 const signOutFailure = () => {

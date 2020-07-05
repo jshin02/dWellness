@@ -26,5 +26,5 @@ $(() => {
   userX.addHandlers()
   $('main').hide()
   $('#signup-form').hide()
-  // $('#signInMessage').hide()
+  $('#signin-message').hide()
 })

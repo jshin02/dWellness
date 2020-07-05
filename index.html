@@ -13,39 +13,40 @@
     </head>
     <body>
       <header>
-        <h1>Welcome to <span id="dwell">dWell</span>ness</h1>
+        <h1 id="intro">Welcome to <span id="dwell">dWell</span>ness</h1>
         <div class="form-row">
-          <section id="signup" class="col-6 registration">
-            <form id="signup-form">
-              <h3>Create Account</h3>
-              <input type="text" class="form-control" name="credentials[email]" placeholder="E-mail" required>
-              <input type="password" class="form-control sm" name="credentials[password]" placeholder="Password" required>
-              <input type="password" class="form-control sm" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
-              <button type="submit">Sign Up</button>
-            </form>
-          </section>
-          <section id="signin" class="col-6 registration">
-            <form id="signin-form">
-              <h3>Sign In</h3>
-              <input type="text" class="form-control sm" name="credentials[email]" placeholder="Email">
-              <input type="password" class="form-control sm" name="credentials[password]" placeholder="Password">
-              <button type="submit">Sign In</button>
-            </form>
-          </section>
-          <section id="authMessages" class="col authMessages">
-            <section id="signUpMessage" class="col-6">
-              <h3>Hello, Friend!</h3>
-              <h5>Sign up to start recording all of the places you go and how they impact your wellness.</h5>
-              <form id='test'>
-                <button type="submit" class="ghost" id="signup">Sign Up</button>
+          <div class="col-6">
+            <section class="registration">
+              <form id="signup-form">
+                <h3>Create Account</h3>
+                <input type="text" class="form-control" name="credentials[email]" placeholder="E-mail" required>
+                <input type="password" class="form-control sm" name="credentials[password]" placeholder="Password" required>
+                <input type="password" class="form-control sm" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+              </form>
+              <form id="signin-form">
+                <h3>Sign In</h3>
+                <input type="text" class="form-control sm" name="credentials[email]" placeholder="Email">
+                <input type="password" class="form-control sm" name="credentials[password]" placeholder="Password">
+                <button type="submit">Sign In</button>
               </form>
             </section>
-            <section id="signInMessage" class="col-6">
-              <h3>Welcome Back!</h3>
-              <button class="ghost" id="signin">Sign In</button>
+          </div>
+          <div class="col-6">
+            <section id="authMessages" class="authMessages">
+              <section id="signup-message" class="welcome">
+                <h3>Hello, Friend!</h3>
+                <h5>Sign up to start recording all of the places you go and how they impact your wellness.</h5>
+                <button id="signup-trigger">Sign Up</button>
+              </section>
+              <section id="signin-message" class="welcome">
+                <h3>Welcome Back!</h3>
+                <button id="signin-trigger">Sign In</button>
+              </section>
             </section>
-          </section>
+          </div>
         </div>
+
         <blockquote id="seuss">You're on your own. And you know what you know. And you are the one who'll decide where to go. <span id=author>-Oh, The Places You Will Go!</span></blockquote>
         <span id="registration-result"></span>
       </header>

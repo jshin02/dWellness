@@ -5,7 +5,8 @@ const placeApi = require('../place/api.js')
 
 const addHandlers = event => {
   $('.content').on('click', '#showPlaceButton', showPlace)
-  $('#signup').on('click', registrationNeeded)
+  $('#signup-trigger').on('click', registrationNeeded)
+  $('#signin-trigger').on('click', registrationCompleted)
 }
 
 const showPlace = event => {
@@ -25,9 +26,21 @@ const showPlace = event => {
 }
 
 const registrationNeeded = event => {
-  $('#signup-form').css('opacity','0').fadeIn().show()
-  $('#signin-form').hide()
+  $('.authMessages').toggleClass('triggerMessage')
+  $('.registration').toggleClass('triggerLogin')
+  $('#signup-message').fadeOut()
+  $('#signin-message').delay(500).fadeIn()
+  $('#signin-form').fadeOut()
+  $('#signup-form').delay(500).fadeIn()
+}
 
+const registrationCompleted = event => {
+  $('.authMessages').toggleClass('triggerMessage')
+  $('.registration').toggleClass('triggerLogin')
+  $('#signin-message').fadeOut()
+  $('#signup-message').delay(500).fadeIn()
+  $('#signup-form').fadeOut()
+  $('#signin-form').delay(500).fadeIn()
 }
 
 module.exports = {
