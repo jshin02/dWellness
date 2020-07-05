@@ -1,7 +1,7 @@
 {{#each places as |place|}}
   {{log place}}
-  <section data-id="{{place._id}}">
-    <button id="showPlaceButton" data-id="{{place._id}}">
+  <section class="col-4 sm-col-6" data-id="{{place._id}}">
+    <button id="showPlaceButton" class="btn" data-id="{{place._id}}">
       <div class="onePlace" data-id="{{place._id}}" data-title="{{place.title}}">
         <h6>Title:</h6>
         <h4>{{limit place.title 20}}</h4>
@@ -16,7 +16,7 @@
           {{/if}}
       </div>
     </button>
-      <!-- {{> partial book=book}} -->
+      <!-- {{> placePartial place=place}} -->
   </section>
 
 {{/each}}

@@ -20,7 +20,7 @@ $(() => {
   $('#addPlace-form').on('submit', placeEvents.onAddPlace)
   $('#updatePlace-form').on('submit', placeEvents.onUpdatePlace)
   $('#deletePlace-form').on('submit', placeEvents.onDeletePlace)
-  $('#places-index').on('click', placeEvents.onGetPlaces)
+  $('#places-index-container').on('click', placeEvents.onGetPlaces)
 
   //Ui/Ux
   userX.addHandlers()

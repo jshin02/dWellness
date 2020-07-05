@@ -61,17 +61,17 @@
           </form>
         </section>
 
-        <h3>Add Places</h3>
         <section id="addPlace" class="place">
+          <h3>Add Places</h3>
           <form id="addPlace-form">
             <input type="text" name="place[title]" placeholder="Title">
             <input type="text" name="place[address]" placeholder="Address">
             <input type="text" name="place[city]" placeholder="City">
             <input type="text" name="place[country]" placeholder="Country">
-            <button type="submit">Add Place!</button>
+            <button type="submit" class="btn">Add Place!</button>
           </form>
         </section>
-        <section id="updatePlace" class="place">
+        <!-- <section id="updatePlace" class="place">
           <h3>Update Place</h3>
           <form id="updatePlace-form">
             <input type="text" name="place[title]" placeholder="Title">
@@ -81,7 +81,7 @@
             <input type="text" name="place[place_id]" placeholder="place_id">
             <button type="submit">Update Place</button>
           </form>
-        </section>
+        </section> -->
         <section id="deletePlace" class="place">
           <h3>Delete Place</h3>
           <form id="deletePlace-form">
@@ -89,12 +89,13 @@
             <button type="submit">Delete Place</button>
           </form>
         </section>
-        <section id="places-index">
+        <section id="places-index-container" class="place">
           <button type="submit">See all Places</button>
+          <div id="places-index" class="row showPlace"></div>
         </section>
-        <div id="content" class="content"></div>
-        <div class="place-container">
-          <div class="showPlace"></div>
+        <div id="content" class="content place"></div>
+        <div class="place-container place">
+<!-- <div id="places-index" class="row showPlace"></div> -->
         </div>
       </main>
     </body>

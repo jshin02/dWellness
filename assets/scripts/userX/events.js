@@ -4,7 +4,7 @@ const ui = require('./ui.js')
 const placeApi = require('../place/api.js')
 
 const addHandlers = event => {
-  $('.content').on('click', '#showPlaceButton', showPlace)
+  $('.showPlace').on('click', '#showPlaceButton', showPlace)
   $('#signup-trigger').on('click', registrationNeeded)
   $('#signin-trigger').on('click', registrationCompleted)
 }
@@ -13,11 +13,13 @@ const showPlace = event => {
   //grab the element that user clicks on and add styling class
   $('.content').empty().fadeOut()
   event.preventDefault()
+  console.log(event)
   $(event.target.firstElementChild).addClass('item')
   const place = event.currentTarget.firstElementChild
   $(place).addClass('item')
   //store id for notes CRUD actions
   store.place_id=place.dataset.id
+  console.log(place)
   $('.showPlace').append($(place)).fadeIn()
   //Show notes in place
   placeApi.showPlace()
