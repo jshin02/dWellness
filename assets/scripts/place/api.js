@@ -35,7 +35,6 @@ const addPlace = formData => {
 }
 
 const updatePlace = formData => {
-  console.log(formData)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl+'/places/'+store.place_id,
@@ -55,7 +54,6 @@ const updatePlace = formData => {
 }
 
 const deletePlace = id => {
-  console.log(id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl+'/places/'+id,

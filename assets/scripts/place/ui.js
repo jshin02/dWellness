@@ -3,13 +3,11 @@ const placeEvents = require('./events2.js')
 const showPlacesTemplate = require('../templates/place-listing.handlebars')
 
 const addPlaceSuccess = ajaxData => {
-  console.log('addPlaceSuccess')
   $('#addPlace-form').trigger('reset')
   $('#places-index-container').show()
 }
 
 const addPlaceFailure = () => {
-  console.log('addPlaceFailure');
   $('#addPlace-form').trigger('reset')
 }
 
@@ -19,12 +17,10 @@ const updatePlaceSuccess = ajaxData => {
 }
 
 const updatePlaceFailure = () => {
-  console.log('updatePlaceFailure')
   $('#updatePlace-form').trigger('reset')
 }
 
 const deletePlaceSuccess = () => {
-  console.log('test');
   $('#places-index-container').show()
 }
 
@@ -41,7 +37,6 @@ const placeUpdateDeleteHandlers = () => {
 }
 
 const getPlacesSuccess = ajaxData => {
-  console.log(ajaxData)
   const showPlacesHtml = showPlacesTemplate({ places: ajaxData.places})
 
   $('.content-notes').empty().hide()
@@ -53,7 +48,7 @@ const getPlacesSuccess = ajaxData => {
 }
 
 const getPlacesFailure = () => {
-  console.log('getPlacesFailure');
+  $('#changePw-message').html('Error getting places, please refresh page and try again.')
 }
 
 module.exports = {

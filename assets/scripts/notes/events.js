@@ -18,7 +18,6 @@ const onAddNote = event => {
 const onUpdateNote = event => {
   event.preventDefault()
   let data = getFormFields(event.target)
-  console.log(data)
   api.updateNote(data)
     .then(ui.onUpdateNoteSuccess)
     .catch(ui.onUpdateNoteFailure)
@@ -26,7 +25,6 @@ const onUpdateNote = event => {
 
 const onDeleteNote = event => {
   event.preventDefault()
-  console.log(event)
   store.note_id = event.target.dataset.id
   $('.content-notes').empty()
 

@@ -25,7 +25,6 @@ const onDeletePlace = event => {
 }
 
 const onGetPlaces = event => {
-  console.log(event)
   event.preventDefault()
   $('#addNote').hide()
   $('#addPlace').show()
