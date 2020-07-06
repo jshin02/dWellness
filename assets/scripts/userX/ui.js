@@ -6,15 +6,16 @@ const addNoteHandlers = () => {
   $(()=>{
     //note CRUD
     $('#addnote-form').on('submit', notesEvents.onAddNote)
-    // $('#updateNote-form').on('submit', notesEvents.onUpdateNote)
+    // $('.showPlace').on('click','#updatePlaceBtn', () => console.log('hello') /*notesEvents.onUpdateNote*/)
     $('.content').on('click','#deleteNoteButton', notesEvents.onDeleteNote)
   })
 }
 
 const showPlaceContent = showPlaceData => {
   const showNotesHtml = showNotesTemplate({notes: showPlaceData.place.notes})
-  $('.content').append(showNotesHtml)
   $('.showPlace').empty().hide()
+  $('.content').append(showNotesHtml).fadeIn()
+  $('#places-index-container').show()
   //initiate event listener for note CRUD actions
   addNoteHandlers()
 }

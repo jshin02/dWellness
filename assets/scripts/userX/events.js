@@ -14,12 +14,14 @@ const showPlace = event => {
   $('.showPlace').empty().fadeOut()
   event.preventDefault()
   console.log(event)
-  $(event.target.firstElementChild).addClass('item')
+  // $(event.target.firstElementChild).addClass('item')
+  console.log(event.currentTarget)
   const place = event.currentTarget.firstElementChild
+  console.log(place)
   $(place).addClass('item')
+  console.log(place)
   //store id for notes CRUD actions
   store.place_id=place.dataset.id
-  console.log(place)
   $('.content').append($(place)).fadeIn()
   //Show notes in place
   placeApi.showPlace()

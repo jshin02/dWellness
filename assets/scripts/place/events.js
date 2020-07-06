@@ -8,19 +8,11 @@ const ui = require('./ui.js')
 const onAddPlace = event => {
   event.preventDefault()
   let userData = getFormFields(event.target)
+  $('.showPlace').empty()
 
   api.addPlace(userData)
     .then(ui.addPlaceSuccess)
     .catch(ui.addPlaceFailure)
-}
-
-const onUpdatePlace = event => {
-  event.preventDefault()
-  let userData = getFormFields(event.target)
-
-  api.updatePlace(userData)
-    .then(ui.updatePlaceSuccess)
-    .catch(ui.updatePlaceFailure)
 }
 
 const onDeletePlace = event => {
@@ -43,7 +35,6 @@ const onGetPlaces = event => {
 
 module.exports = {
   onAddPlace,
-  onUpdatePlace,
   onDeletePlace,
   onGetPlaces
 }

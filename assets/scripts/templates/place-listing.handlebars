@@ -1,6 +1,6 @@
 {{#each places as |place|}}
   {{log place}}
-  <section class="col-4 sm-col-6" data-id="{{place._id}}">
+  <section class="col-md-4 col-sm-6 place-template" data-id="{{place._id}}">
     <button id="showPlaceButton" class="btn" data-id="{{place._id}}">
       <div class="onePlace" data-id="{{place._id}}" data-title="{{place.title}}">
         <h6>Title:</h6>
@@ -16,7 +16,19 @@
           {{/if}}
       </div>
     </button>
-      <!-- {{> placePartial place=place}} -->
+    <button type="submit" id="updatePlaceBtn" class="updatePlaceBtn btn" data-id="{{place._id}}">Update Place</button>
+    <section id="updatePlace-template">
+      <form class="updatePlace-form" data-id="{{place._id}}">
+        <h3>Update Place</h3>
+        <input type="text" name="place[title]" placeholder="Title">
+        <input type="text" name="place[address]" placeholder="Address">
+        <input type="text" name="place[city]" placeholder="City">
+        <input type="text" name="place[country]" placeholder="Country">
+        <button id="submit-update" type="submit" data-id="{{place._id}}">Update Place</button>
+      </form>
+    </section>
+    <button id="deletePlaceBtn" class="btn" data-id="{{place._id}}">Delete Place</button>
   </section>
+  <!-- {{> placePartial place=place}} -->
 
 {{/each}}

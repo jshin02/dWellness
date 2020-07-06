@@ -138,8 +138,15 @@ main {
   }
 }
 
-//Place Stylesheet
-.place{
+//**** Stylesheet****
+.place-container{
+  border: 1px solid blue;
+}
+//Changes to handlebars html tags
+.showPlace{
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
   padding: 50px;
   #addPlace-form{
     flex-direction: row;
@@ -150,11 +157,15 @@ main {
     flex-basis: 30%;
     width: 200px;
     border: 2px solid green;
+    display: block;
+    width: 100%;
   }
 }
-.showPlace{
-  display: flex;
-  button{
-    border: 1px solid black;
-  }
+.place-template{
+  width: 100%;
+  border: 1px solid orange;
+  margin: 0 auto;
+}
+.updatePlace-form{
+  display: none;
 }

@@ -38,7 +38,7 @@ const updatePlace = formData => {
   console.log(formData)
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl+'/places/'+formData.place.place_id,
+    url: config.apiUrl+'/places/'+store.place_id,
     headers:{
       Authorization: "Bearer "+store.user.token
     },
@@ -54,11 +54,11 @@ const updatePlace = formData => {
   })
 }
 
-const deletePlace = formData => {
-  console.log(formData)
+const deletePlace = id => {
+  console.log(id)
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl+'/places/'+formData.place.id,
+    url: config.apiUrl+'/places/'+id,
     headers:{
       Authorization: "Bearer "+store.user.token
     }

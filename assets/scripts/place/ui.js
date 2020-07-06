@@ -1,10 +1,11 @@
 const store = require('../store.js')
+const placeEvents = require('./events2.js')
 const showPlacesTemplate = require('../templates/place-listing.handlebars')
 
 const addPlaceSuccess = ajaxData => {
-  console.log(ajaxData);
   console.log('addPlaceSuccess')
   $('#addPlace-form').trigger('reset')
+  $('#places-index-container').show()
 }
 
 const addPlaceFailure = () => {
@@ -13,9 +14,8 @@ const addPlaceFailure = () => {
 }
 
 const updatePlaceSuccess = ajaxData => {
-  console.log(ajaxData)
-  console.log('updatePlaceSuccess')
-  $('#updatePlace-form').trigger('reset')
+  $('#updatePlace-form').hide()
+  $('#places-index-container').show()
 }
 
 const updatePlaceFailure = () => {
@@ -24,19 +24,32 @@ const updatePlaceFailure = () => {
 }
 
 const deletePlaceSuccess = () => {
-  console.log('deletePlaceSuccess')
+  console.log('test');
+  $('#places-index-container').show()
 }
 
 const deletePlaceFailure = () => {
-  console.log('deletePlaceFailure')
+  $('#places-index-container').show()
+}
+
+const placeUpdateDeleteHandlers = () => {
+  $(()=>{
+    $('.updatePlaceBtn').on('click', () => $('.updatePlace-form').show())
+    $('.updatePlace-form').on('submit', placeEvents.onUpdatePlace)
+    $('.showPlace').on('click','#deletePlaceBtn', placeEvents.onDeletePlace)
+  })
 }
 
 const getPlacesSuccess = ajaxData => {
   console.log(ajaxData)
   const showPlacesHtml = showPlacesTemplate({ places: ajaxData.places})
+
   $('.content').empty().hide()
   $('.showPlace').append(showPlacesHtml).fadeIn()
-  console.log('getPlacesSuccess');
+  $('#places-index-container').hide()
+  //activate listeners on place Update and Delete
+  placeUpdateDeleteHandlers()
+
 }
 
 const getPlacesFailure = () => {

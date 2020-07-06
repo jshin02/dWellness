@@ -18,8 +18,7 @@ $(() => {
 
   //place CRUD
   $('#addPlace-form').on('submit', placeEvents.onAddPlace)
-  $('#updatePlace-form').on('submit', placeEvents.onUpdatePlace)
-  $('#deletePlace-form').on('submit', placeEvents.onDeletePlace)
+  // $('#deletePlace-form').on('submit', placeEvents.onDeletePlace)
   $('#places-index-container').on('click', placeEvents.onGetPlaces)
 
   //Ui/Ux

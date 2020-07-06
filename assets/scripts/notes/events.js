@@ -18,7 +18,7 @@ const onAddNote = event => {
 const onUpdateNote = event => {
   event.preventDefault()
   let data = getFormFields(event.target)
-
+  console.log(data)
   api.updateNote(data)
     .then(ui.onUpdateNoteSuccess)
     .catch(ui.onUpdateNoteFailure)
@@ -28,7 +28,7 @@ const onDeleteNote = event => {
   event.preventDefault()
   console.log(event)
   store.note_id = event.target.dataset.id
-  $('.showPlace').empty()
+  $('.content').empty()
 
   api.deleteNote()
     .then(placeApi.showPlace)
