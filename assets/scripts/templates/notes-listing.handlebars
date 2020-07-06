@@ -1,18 +1,5 @@
-<section id="addNote">
-  <h3>Add note</h3>
-  <form id="addnote-form">
-    <input type="text" name="note[title]" placeholder="Title">
-    <input type="text" name="note[body]" placeholder="Content">
-    <input type="number" name="note[health]" placeholder="Health Rating">
-    <input type="number" name="note[work]" placeholder="Work Rating">
-    <input type="number" name="note[play]" placeholder="Play Rating">
-    <input type="number" name="note[love]" placeholder="Love Rating">
-    <button type="submit">Add Note</button>
-  </form>
-</section>
-
-<section id="note">
 {{#each notes as |note|}}
+<section id="note" class="col-4">
   {{log note}}
   <h3>Title</h3>
   <p>{{note.title}}</p>
@@ -23,5 +10,5 @@
   <h4>Play: {{note.play}}</h4>
   <h4>love: {{note.love}}</h4>
   <button id="deleteNoteButton" data-id="{{note._id}}">Delete!</button>
-{{/each}}
 </section>
+{{/each}}

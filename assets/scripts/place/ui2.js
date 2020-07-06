@@ -2,16 +2,6 @@ const store = require('../store.js')
 const placeEvents = require('./events2.js')
 const showPlacesTemplate = require('../templates/place-listing.handlebars')
 
-const addPlaceSuccess = ajaxData => {
-  console.log('addPlaceSuccess')
-  $('#addPlace-form').trigger('reset')
-  $('#places-index-container').show()
-}
-
-const addPlaceFailure = () => {
-  console.log('addPlaceFailure');
-  $('#addPlace-form').trigger('reset')
-}
 
 const updatePlaceSuccess = ajaxData => {
   $('#updatePlace-form').hide()
@@ -57,12 +47,8 @@ const getPlacesFailure = () => {
 }
 
 module.exports = {
-  addPlaceSuccess,
-  addPlaceFailure,
   updatePlaceSuccess,
   updatePlaceFailure,
   deletePlaceSuccess,
-  deletePlaceFailure,
-  getPlacesSuccess,
-  getPlacesFailure
+  deletePlaceFailure
 }

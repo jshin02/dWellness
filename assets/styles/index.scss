@@ -35,6 +35,9 @@ header{
       padding: 40px 20px;
       color: $background-secondary;
     }
+    p{
+      color: red;
+    }
     blockquote{
       margin-top: 5%;
     }
@@ -94,9 +97,9 @@ form {
   input{
     padding: 12px;
     margin: 8px 0;
+    max-width: 300px;
   }
   button{
-
     background-color: #ff4b2b;
     margin-top: 20px;
   }
@@ -136,9 +139,23 @@ main {
     section{
     }
   }
+  h1{
+    color: $text-primary;
+  }
+  h3{
+    color: $text-primary;
+  }
+  .btn{
+    background-color: #ff4b2b;
+    color: $background-secondary;
+    margin-top: 20px;
+  }
+  #changePw-message{
+    text-align: center;
+  }
 }
 
-//**** Stylesheet****
+//****Place stylesheet****
 .place-container{
   border: 1px solid blue;
 }
@@ -168,4 +185,28 @@ main {
 }
 .updatePlace-form{
   display: none;
+}
+#addPlace{
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid red;
+}
+
+//****Notes stylesheet****
+.content{
+  padding: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  border: 1px solid blue;
+}
+.content-notes{
+  padding: 50px;
+  margin: 20px 0;
+  display: flex;
+  flex: wrap;
+  border: 1px solid red;
+}
+#note{
+  border: 2px solid black;
 }

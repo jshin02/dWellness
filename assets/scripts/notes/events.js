@@ -28,7 +28,7 @@ const onDeleteNote = event => {
   event.preventDefault()
   console.log(event)
   store.note_id = event.target.dataset.id
-  $('.content').empty()
+  $('.content-notes').empty()
 
   api.deleteNote()
     .then(placeApi.showPlace)

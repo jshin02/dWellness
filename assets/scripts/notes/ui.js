@@ -8,7 +8,7 @@ const onAddNoteSuccess = data => {
   console.log(newNote)
   const addNewNote = addNoteTemplate(newNote)
   console.log(addNewNote)
-  $('.content').append(addNewNote)
+  $('.content-notes').append(addNewNote)
   console.log('Added note successfully')
   $('#addnote-form').trigger('reset')
 }
@@ -31,7 +31,7 @@ const onDeleteNoteSuccess = deleteNoteData => {
   console.log(deleteNoteData)
   const showNotesHtml = showNotesTemplate({notes: deleteNoteData.place.notes})
 
-  $('.content').append(showNotesHtml)
+  $('.content-notes').append(showNotesHtml)
   console.log('Deleted note success')
 }
 

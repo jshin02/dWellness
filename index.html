@@ -46,23 +46,24 @@
             </section>
           </div>
         </div>
-
+        <p id="errMessage"></p>
         <blockquote id="seuss">You're on your own. And you know what you know. And you are the one who'll decide where to go. <span id=author>-Oh, The Places You Will Go!</span></blockquote>
         <span id="registration-result"></span>
       </header>
       <main>
         <!-- User Preferences -->
         <section id="signedIn" class="preferences">
-          <h3>Change Password</h3>
           <form id="pwChange-form">
+            <h3>Change Password</h3>
             <input type="text" class="form-control" name="passwords[old]" placeholder="Old Password">
             <input type="text" class="form-control" name="passwords[new]" placeholder="New Password">
-            <button type="submit">Change</button> <button id="signout-button" type='submit'>Sign Out</button>
+            <button type="submit" class="btn">Change</button> <button id="signout-button" type='submit' class="btn">Sign Out</button>
           </form>
+          <p id="changePw-message"></p>
         </section>
 
         <section id="addPlace" class="place">
-          <h3>Add Places</h3>
+          <h3>Add Place</h3>
           <form id="addPlace-form">
             <input type="text" name="place[title]" placeholder="Title">
             <input type="text" name="place[address]" placeholder="Address">
@@ -71,31 +72,29 @@
             <button type="submit" class="btn">Add Place!</button>
           </form>
         </section>
-        <!-- <section id="updatePlace" class="place">
-          <h3>Update Place</h3>
-          <form id="updatePlace-form">
-            <input type="text" name="place[title]" placeholder="Title">
-            <input type="text" name="place[address]" placeholder="Address">
-            <input type="text" name="place[city]" placeholder="City">
-            <input type="text" name="place[country]" placeholder="Country">
-            <input type="text" name="place[place_id]" placeholder="place_id">
-            <button type="submit">Update Place</button>
-          </form>
-        </section> -->
-        <section id="deletePlace" class="place">
-          <h3>Delete Place</h3>
-          <form id="deletePlace-form">
-            <input type="text" name="place[id]" placeholder="place_id">
-            <button type="submit">Delete Place</button>
-          </form>
-        </section>
+
         <section id="places-index-container" class="place">
           <button type="submit">See all Places</button>
         </section>
-        <div id="content" class="content place"></div>
         <div class="place-container place">
           <div id="places-index" class="row showPlace"></div>
         </div>
+        <div class="content place">
+          <div id="addNote">
+            <h3>Add note</h3>
+            <form id="addnote-form">
+              <input type="text" name="note[title]" placeholder="Title">
+              <input type="text" name="note[body]" placeholder="Content">
+              <input type="number" name="note[health]" placeholder="Health Rating">
+              <input type="number" name="note[work]" placeholder="Work Rating">
+              <input type="number" name="note[play]" placeholder="Play Rating">
+              <input type="number" name="note[love]" placeholder="Love Rating">
+              <button type="submit">Add Note</button>
+            </form>
+          </div>
+          <div class="singlePlace row"></div>
+        </div>
+        <div class="content-notes"></div>
       </main>
     </body>
 </html>

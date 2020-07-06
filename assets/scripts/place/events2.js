@@ -4,15 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const store = require('../store.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
-
-const onAddPlace = event => {
-  event.preventDefault()
-  let userData = getFormFields(event.target)
-
-  api.addPlace(userData)
-    .then(ui.addPlaceSuccess)
-    .catch(ui.addPlaceFailure)
-}
+const ui2 = require('./ui2.js')
 
 const onUpdatePlace = event => {
   event.preventDefault()
@@ -21,8 +13,8 @@ const onUpdatePlace = event => {
   $('.showPlace').empty()
 
   api.updatePlace(userData)
-    .then(ui.updatePlaceSuccess)
-    .catch(ui.updatePlaceFailure)
+    .then(ui2.updatePlaceSuccess)
+    .catch(ui2.updatePlaceFailure)
 }
 
 const onDeletePlace = event => {
@@ -31,8 +23,8 @@ const onDeletePlace = event => {
   $('.showPlace').empty()
 
   api.deletePlace(id)
-    .then(ui.deletePlaceSuccess)
-    .catch(ui.deletePlaceFailure)
+    .then(ui2.deletePlaceSuccess)
+    .catch(ui2.deletePlaceFailure)
 }
 
 module.exports = {

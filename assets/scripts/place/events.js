@@ -27,7 +27,9 @@ const onDeletePlace = event => {
 const onGetPlaces = event => {
   console.log(event)
   event.preventDefault()
-
+  $('#addNote').hide()
+  $('#addPlace').show()
+  $('.singlePlace').empty().hide()
   api.getPlaces()
     .then(ui.getPlacesSuccess)
     .catch(ui.getPlacesFailure)
