@@ -1,99 +1,65 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# dWellness: An application to "check-in" at places you visit
 
-# browser-template
+This application allows a user to maintain a log of places they visit with check-ins for each time they visit, where they are encouraged to dwell on their time spent by evaluating their wellness each time they visit. Afterwards, users will have an index of places that provide a snapshot of how each place affects their Wellness.
+The categories users will evaluate are Health, Work, Play and Love.
+The scoring of each section is defined as follows:
+- Health: Wellness in Mind, Body and Spirit
+  - Ex: Fatigue, Energy, Balance
+- Work: Self-Improvement and Growth
+  - Ex: Work, Passions, Skills and Interests
+- Play: Joy
+  - Ex: How much joy was added by this experience?
+- Love: Connection, Affection and Intimacy
+  - Ex: Did this experience make you feel important?
+  - Ex: Did this experience make you feel loved?
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+Note: The evaluation of places was inspired by the book "Designing Your Life" by Bill Burnett & Dave Evans.
+More about the book can be found [here](https://designingyour.life/the-book/)
 
-## Structure
-Adding front-end component for dWellness!!
+## Important Links
 
-### Scripts
+- [API Repo](www.link.com)
+- [Deployed API](https://git.heroku.com/damp-shore-57998.git)
+- [Deployed Client](https://jshin02.github.io/dWellness/)
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+## Planning Story
 
-### Config
+The intention is to create the interactivity of each CRUD request made to the API.
+First I will present the index when the user logs in, then operate on each CRUD request per place they add in.
+Next, I will design the user authentication experience.
+Next, I will work on the second resource (called "notes") and the display and interaction with those CRUD requests.
+Next, I will work on data interaction between the two resources.
+Finally, I will find a way to incorporate a 3rd party resource.
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`assets/scripts/config.js`](assets/scripts/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+### User Stories
 
-### Styles
+- As a user, I want to make a note each time I visit a place so I can see my visits there over time.
+- As a user, I want to make a not of "places to visit" or "familiar places".
+- As a user, I want to evaluate where I've taken the most notes so that I can reflect on where I'm spending the most time.
+- As a user, I want to rate the value I derived in one of the four aforementioned categories.
+- As a user, I want to set a reminder to return to a place within a time frame.
+- As a user, I want to note if a place should be revisited, and filter by that categorization.
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+### Technologies Used
 
-### Forms and Using `getFormFields`
+- jQuery
+- HTML/CSS
+- Bootstrap
+- Javascript
+- Handlebars
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+### Unsolved Problems
 
-## Adding Images
+- Still need to improve how users can update places
+- Still need to improve how users can update notes
 
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
+- Would like to eventually integrate a 3rd party API
+- Would like to eventually prepopulate a form that needs to be updated.
+- Would like to eventually create a data visual of all the scores users provide through their notes.
 
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
-```
+## Images
 
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
+---
 
-## Adding Fonts
-
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
-
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
-
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
-
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-```
-
-## Tasks
-
-Developers should run these often!
-
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-- `grunt deploy`: builds and deploys master branch
-
-
-## Additional Resources
-
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
-
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+#### Wireframe:
+![wireframe](https://imgur.com/zIbBGin)

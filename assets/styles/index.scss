@@ -173,14 +173,12 @@ main {
   button{
     flex-basis: 30%;
     width: 200px;
-    border: 2px solid green;
     display: block;
     width: 100%;
   }
 }
 .place-template{
   width: 100%;
-  border: 1px solid orange;
   margin: 0 auto;
 }
 .updatePlace-form{
@@ -189,7 +187,6 @@ main {
 #addPlace{
   margin-top: 20px;
   text-align: center;
-  border: 1px solid red;
 }
 
 //****Notes stylesheet****
@@ -198,14 +195,12 @@ main {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
-  border: 1px solid blue;
 }
 .content-notes{
   padding: 50px;
   margin: 20px 0;
   display: flex;
   flex: wrap;
-  border: 1px solid red;
 }
 #note{
   border: 2px solid black;
