@@ -4371,39 +4371,37 @@ module.exports = {
 var Handlebars = __webpack_require__(73);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data,blockParams) {
-    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.escapeExpression, alias3=container.lambda, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : (container.nullContext || {}), lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
         }
         return undefined
     };
 
-  return "  "
-    + alias2(lookupProperty(helpers,"log").call(alias1,blockParams[0][0],{"name":"log","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":2,"column":2},"end":{"line":2,"column":15}}}))
-    + "\r\n  <section class=\"col-md-4 col-sm-6 place-template\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+  return "  <section class=\"col-md-4 col-sm-6 place-template\" data-id=\""
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">\r\n    <button id=\"showPlaceButton\" class=\"btn\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">\r\n      <div class=\"onePlace\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\" data-title=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"title") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"title") : stack1), depth0))
     + "\">\r\n        <h6>Title:</h6>\r\n        <h4>"
-    + alias2(__default(__webpack_require__(74)).call(alias1,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"title") : stack1),20,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":7,"column":12},"end":{"line":7,"column":36}}}))
+    + alias2(__default(__webpack_require__(74)).call(alias3,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"title") : stack1),20,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":6,"column":12},"end":{"line":6,"column":36}}}))
     + "</h4>\r\n        <h6>Address:</h6>\r\n        <h4>"
-    + alias2(__default(__webpack_require__(74)).call(alias1,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"address") : stack1),30,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":9,"column":12},"end":{"line":9,"column":38}}}))
+    + alias2(__default(__webpack_require__(74)).call(alias3,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"address") : stack1),30,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":8,"column":12},"end":{"line":8,"column":38}}}))
     + "</h4>\r\n        <h6>City:</h6>\r\n        <h4>"
-    + alias2(__default(__webpack_require__(74)).call(alias1,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"city") : stack1),15,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":11,"column":12},"end":{"line":11,"column":35}}}))
+    + alias2(__default(__webpack_require__(74)).call(alias3,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"city") : stack1),15,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":10,"column":12},"end":{"line":10,"column":35}}}))
     + "</h4>\r\n"
-    + ((stack1 = lookupProperty(helpers,"if").call(alias1,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"country") : stack1),{"name":"if","hash":{},"fn":container.program(2, data, 0, blockParams),"inverse":container.program(4, data, 0, blockParams),"data":data,"blockParams":blockParams,"loc":{"start":{"line":12,"column":10},"end":{"line":16,"column":17}}})) != null ? stack1 : "")
+    + ((stack1 = lookupProperty(helpers,"if").call(alias3,((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"country") : stack1),{"name":"if","hash":{},"fn":container.program(2, data, 0, blockParams),"inverse":container.program(4, data, 0, blockParams),"data":data,"blockParams":blockParams,"loc":{"start":{"line":11,"column":10},"end":{"line":15,"column":17}}})) != null ? stack1 : "")
     + "      </div>\r\n    </button>\r\n    <button type=\"submit\" id=\"updatePlaceBtn\" class=\"updatePlaceBtn btn\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">Update Place</button>\r\n    <section id=\"updatePlace-template\">\r\n      <form class=\"updatePlace-form\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">\r\n        <h3>Update Place</h3>\r\n        <input type=\"text\" name=\"place[title]\" placeholder=\"Title\">\r\n        <input type=\"text\" name=\"place[address]\" placeholder=\"Address\">\r\n        <input type=\"text\" name=\"place[city]\" placeholder=\"City\">\r\n        <input type=\"text\" name=\"place[country]\" placeholder=\"Country\">\r\n        <button id=\"submit-update\" type=\"submit\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">Update Place</button>\r\n      </form>\r\n    </section>\r\n    <button id=\"deletePlaceBtn\" class=\"btn\" data-id=\""
-    + alias2(alias3(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">Delete Place</button>\r\n  </section>\r\n  <!-- "
     + ((stack1 = container.invokePartial(__webpack_require__(374),depth0,{"name":"placePartial","hash":{"place":blockParams[0][0]},"data":data,"blockParams":blockParams,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
     + " -->\r\n\r\n";
@@ -4416,7 +4414,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     };
 
   return "            <h6>Country:</h6>\r\n            <h4>"
-    + container.escapeExpression(__default(__webpack_require__(74)).call(depth0 != null ? depth0 : (container.nullContext || {}),((stack1 = blockParams[1][0]) != null ? lookupProperty(stack1,"country") : stack1),15,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":14,"column":16},"end":{"line":14,"column":42}}}))
+    + container.escapeExpression(__default(__webpack_require__(74)).call(depth0 != null ? depth0 : (container.nullContext || {}),((stack1 = blockParams[1][0]) != null ? lookupProperty(stack1,"country") : stack1),15,{"name":"limit","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":13,"column":16},"end":{"line":13,"column":42}}}))
     + "</h4>\r\n";
 },"4":function(container,depth0,helpers,partials,data) {
     return "";
@@ -4428,7 +4426,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"places") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 1, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams,"loc":{"start":{"line":1,"column":0},"end":{"line":34,"column":9}}})) != null ? stack1 : "");
+  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"places") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 1, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams,"loc":{"start":{"line":1,"column":0},"end":{"line":33,"column":9}}})) != null ? stack1 : "");
 },"usePartial":true,"useData":true,"useBlockParams":true});
 
 /***/ }),
@@ -4758,29 +4756,27 @@ function resetLoggedProperties() {
 var Handlebars = __webpack_require__(73);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data,blockParams) {
-    var stack1, alias1=container.escapeExpression, alias2=container.lambda, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
         }
         return undefined
     };
 
-  return "<section id=\"note\" class=\"col-4\">\r\n  "
-    + alias1(lookupProperty(helpers,"log").call(depth0 != null ? depth0 : (container.nullContext || {}),blockParams[0][0],{"name":"log","hash":{},"data":data,"blockParams":blockParams,"loc":{"start":{"line":3,"column":2},"end":{"line":3,"column":14}}}))
-    + "\r\n  <h3>Title</h3>\r\n  <p>"
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"title") : stack1), depth0))
+  return "<section id=\"note\" class=\"col-4\">\r\n  <h3>Title</h3>\r\n  <p>"
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"title") : stack1), depth0))
     + "</p>\r\n  <h3><span id=\"dwell\">dWell</span>note</h3>\r\n  <p>"
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"body") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"body") : stack1), depth0))
     + "</p>\r\n  <h4>Health: "
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"health") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"health") : stack1), depth0))
     + "</h4>\r\n  <h4>Work: "
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"work") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"work") : stack1), depth0))
     + "</h4>\r\n  <h4>Play: "
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"play") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"play") : stack1), depth0))
     + "</h4>\r\n  <h4>love: "
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"love") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"love") : stack1), depth0))
     + "</h4>\r\n  <button id=\"deleteNoteButton\" data-id=\""
-    + alias1(alias2(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
+    + alias2(alias1(((stack1 = blockParams[0][0]) != null ? lookupProperty(stack1,"_id") : stack1), depth0))
     + "\">Delete!</button>\r\n</section>\r\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data,blockParams) {
     var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -4790,7 +4786,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"notes") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 1, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams,"loc":{"start":{"line":1,"column":0},"end":{"line":14,"column":9}}})) != null ? stack1 : "");
+  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"notes") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 1, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams,"loc":{"start":{"line":1,"column":0},"end":{"line":13,"column":9}}})) != null ? stack1 : "");
 },"useData":true,"useBlockParams":true});
 
 /***/ }),
