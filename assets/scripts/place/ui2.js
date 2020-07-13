@@ -6,18 +6,22 @@ const showPlacesTemplate = require('../templates/place-listing.handlebars')
 const updatePlaceSuccess = ajaxData => {
   $('#updatePlace-form').hide()
   $('#places-index-container').show()
+  $('#place-message').show().html(`Successfully updated - Select "See all Places" for update`).delay(2300).fadeOut()
 }
 
 const updatePlaceFailure = () => {
   $('#updatePlace-form').trigger('reset')
+  $('#place-message').show().html(`Something went wrong - please try again`).delay(2300).fadeOut()
 }
 
 const deletePlaceSuccess = () => {
   $('#places-index-container').show()
+  $('#place-message').show().html(`Successfully deleted - Select "See all Places" for update`).delay(2300).fadeOut()
 }
 
 const deletePlaceFailure = () => {
   $('#places-index-container').show()
+  $('#place-message').show().html(`Something went wrong - please try again`).delay(2300).fadeOut()
 }
 
 const placeUpdateDeleteHandlers = () => {

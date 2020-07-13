@@ -5,15 +5,18 @@ const showPlacesTemplate = require('../templates/place-listing.handlebars')
 const addPlaceSuccess = ajaxData => {
   $('#addPlace-form').trigger('reset')
   $('#places-index-container').show()
+  $('#place-message').show().html(`Successfully added - Select "See all places" for update`).delay(2300).fadeOut()
 }
 
 const addPlaceFailure = () => {
   $('#addPlace-form').trigger('reset')
+  $('#place-message').show().html(`Something went wrong - please try again`).delay(2300).fadeOut()
 }
 
 const updatePlaceSuccess = ajaxData => {
   $('#updatePlace-form').hide()
   $('#places-index-container').show()
+  $('#place-message').show().html(`Successfully updated - Select "See all Places" for update`).delay(2300).fadeOut()
 }
 
 const updatePlaceFailure = () => {
