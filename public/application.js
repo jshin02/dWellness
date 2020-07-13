@@ -4269,15 +4269,18 @@ var showPlacesTemplate = __webpack_require__(141);
 var addPlaceSuccess = function addPlaceSuccess(ajaxData) {
   $('#addPlace-form').trigger('reset');
   $('#places-index-container').show();
+  $('#place-message').show().html('Successfully added - Select "See all places" for update').delay(2300).fadeOut();
 };
 
 var addPlaceFailure = function addPlaceFailure() {
   $('#addPlace-form').trigger('reset');
+  $('#place-message').show().html('Something went wrong - please try again').delay(2300).fadeOut();
 };
 
 var updatePlaceSuccess = function updatePlaceSuccess(ajaxData) {
   $('#updatePlace-form').hide();
   $('#places-index-container').show();
+  $('#place-message').show().html('Successfully updated - Select "See all Places" for update').delay(2300).fadeOut();
 };
 
 var updatePlaceFailure = function updatePlaceFailure() {
@@ -17719,18 +17722,22 @@ var showPlacesTemplate = __webpack_require__(141);
 var updatePlaceSuccess = function updatePlaceSuccess(ajaxData) {
   $('#updatePlace-form').hide();
   $('#places-index-container').show();
+  $('#place-message').show().html('Successfully updated - Select "See all Places" for update').delay(2300).fadeOut();
 };
 
 var updatePlaceFailure = function updatePlaceFailure() {
   $('#updatePlace-form').trigger('reset');
+  $('#place-message').show().html('Something went wrong - please try again').delay(2300).fadeOut();
 };
 
 var deletePlaceSuccess = function deletePlaceSuccess() {
   $('#places-index-container').show();
+  $('#place-message').show().html('Successfully deleted - Select "See all Places" for update').delay(2300).fadeOut();
 };
 
 var deletePlaceFailure = function deletePlaceFailure() {
   $('#places-index-container').show();
+  $('#place-message').show().html('Something went wrong - please try again').delay(2300).fadeOut();
 };
 
 var placeUpdateDeleteHandlers = function placeUpdateDeleteHandlers() {
