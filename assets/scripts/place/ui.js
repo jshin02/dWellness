@@ -51,7 +51,7 @@ const getPlacesSuccess = ajaxData => {
 }
 
 const getPlacesFailure = () => {
-  $('#changePw-message').html('Error getting places, please refresh page and try again.')
+  $('#changePw-message').html('Error getting places, please refresh page and try again.').delay(2300).fadeOut()
 }
 
 module.exports = {
