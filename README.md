@@ -18,7 +18,7 @@ More about the book can be found [here](https://designingyour.life/the-book/)
 
 ## Important Links
 
-- [API Repo](www.link.com)
+- [API Repo](https://github.com/jshin02/dWellness_api)
 - [Deployed API](https://git.heroku.com/damp-shore-57998.git)
 - [Deployed Client](https://jshin02.github.io/dWellness/)
 
